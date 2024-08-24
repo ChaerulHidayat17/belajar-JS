@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritmatika</title>
+</head>
+
+<body>
+    <script>
+        let result = 1 + 2;
+        document.writeln('<p> 1 + 2 = ' + result + '</p>');
+        let originalResult = result;
+
+        result = result - 1;
+        document.writeln('<p>' + originalResult + ' - 1 = ' + result + '</p>');
+        originalResult = result;
+
+        result = result * 5;
+        document.writeln('<p>' + originalResult + ' x 5 = ' + result + '</p>');
+        originalResult = result;
+
+        result = result / 2;
+        document.writeln('<p>' + originalResult + ' / 2 = ' + result + '</p>');
+        originalResult = result;
+
+        result = result % 2;
+        document.writeln('<p>' + originalResult + ' % 2 = ' + result + '</p>')
+        originalResult = result;
+
+        // cara simple ga perlu di tulis result 2x
+        // operator augmented asignment
+
+        result += 9;
+        document.writeln('<p> ' + ' 1 + 9 = ' + result + '</p>');
+        originalResult = result;
+
+        result *= 10;
+        document.writeln('<p> ' + ' 10 * 10 = ' + result + '</p>');
+        originalResult = result;
+
+        result -= 20;
+        document.writeln('<p> ' + ' 100 - 20 = ' + result + '</p>');
+        originalResult = result;
+
+        result /= 5;
+        document.writeln('<p> ' + '80 / 5 = ' + result + '</p>');
+        originalResult = result;
+
+        result %= 6;
+        document.writeln('<p> ' + ' 16 % 3 = ' + result + '</p>');
+        originalResult = result;
+
+        result **= 2;
+        document.writeln('<p> ' + ' 4**2 = ' + result);
+        originalResult = result;
+
+    </script>
+</body>
+
+</html>
