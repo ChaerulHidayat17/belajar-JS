@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String Number</title>
+</head>
+<body>
+    <script>
+        const value1 = '1';
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.writeln(`<p> ${sum} </p>`);
+
+        document.writeln(`<p> ${parseInt(9.6)} </p>`);
+        document.writeln(`<p> ${parseFloat(6.7)} </p>`);
+        document.writeln(`<p> ${Number('3.4')} </p>`);
+        document.writeln(`<p> ${Number('7')} </p>`);
+
+        const a = 1;
+        const b = 2;
+        const jumlah = a.toString() + b.toString();
+        document.writeln(jumlah);
+
+        document.writeln(`<p> ${parseInt('12salah')} </p>`); // masih mentolerir yang penting depan nya number
+        document.writeln(`<p> ${parseFloat('1.9salah')} </p>`);  // masih mentolerir yang penting depan nya number
+        document.writeln(`<p> ${Number('40')} </p>`); // tidak bisa mentolerir kalau Number
+
+        const c = Number('salah'); //NaN
+        const semua = c + 200;
+        document.writeln(semua);
+        // Kalau salah satu ada NaN udah pasti hasil nya NaN
+
+        document.writeln(`<p> ${isNaN(c)} </p>`); // CEK VARIABLE NaN atau Bukan
+    </script>
+</body>
+</html>

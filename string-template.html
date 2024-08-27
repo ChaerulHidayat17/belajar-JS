@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        const nama = 'Chaerul Hidayat';
+        const alamat = 'Cikarang Utara'
+        const template = `Nama : ${nama} Tinggal Di ${alamat}`;
+        document.writeln(template);
+        document.writeln('<br>')
+
+        const fisrtName = 'Chaerul';
+        const lastName = 'Hidayat';
+        const fullName = `Nama Depan Saya ${fisrtName} Dan Nama Belakang Saya Adalah ${lastName}`
+        console.info(fullName);
+
+        const nilai = 95;
+        const template2 = `Name : ${fullName} Lulus : ${nilai > 75}`;
+        document.writeln(template2);
+
+        const multiLine = `Nama Saya Chaerul Hidayat,
+        Saya lagi belajar Java Script,
+        Di Udemy`;
+        document.writeln('<pre>');
+        document.writeln(multiLine)
+        document.writeln('</pre>');
+    </script>
+</body>
+</html>
