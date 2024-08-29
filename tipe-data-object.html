@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+        // Tipe Data Object
+        const person = {};
+        person['Nama'] = 'Chaerul Hidayat';
+        person['Alamat'] = 'Bekasi';
+        person['Umur'] = 24;
+
+        // Tampilkan Dalam Bentuk Console Table
+        console.table(person);
+
+        // Menghapus index
+        delete person['Umur'];
+        console.table(person);
+
+
+        // Cara cepet sekaligus secara langsung
+        const negara = {
+            Asia: 'Indonesia',
+            Eropa: 'Spanyol',
+            Afrika: 'Mesir',
+            Amerika: 'Argentina',
+            Australia: 'Australia'
+        };
+
+        
+        console.table(negara);
+
+        // Penacarian Data Object
+        // menggnakan bactic
+
+        const orang = {
+            'nama lengkap' : 'Chaerul Hidayat',
+            alamat : 'Bekasi',
+            umur : 24
+        };
+        console.info(`Nama : ${orang['nama lengkap']}`);
+        console.info(`Alamat: ${orang.alamat}`);
+        console.info(`Umur : ${orang.umur}`);
+        
+    </script>
+</body>
+</html>
