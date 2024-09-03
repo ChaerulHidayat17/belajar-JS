@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+
+<body>
+    <script>
+        // in person hanya bisa cek property adau atau tidak
+        const person = {
+            firstName: 'Chaerul',
+            lastName: 'Hidayat'
+        };
+
+        if ('firstName' in person) {
+            alert(`Hello ${person.firstName}`);
+        }
+        else {
+            alert('Hellooo');
+        };
+
+        // ----------
+
+        const student = {
+            firstName : 'Chaerul',
+            middleName : undefined,
+            lastName : 'Hidayat'
+        };
+
+        if ('middleName' in student) {
+            alert(`Hello ${person.middleName}`)
+        }
+        else {
+            alert('Helooo Bandung Salah')
+        };
+
+        //////////////////////
+
+        const names = [null, 'Chaerul', null];
+        const result = 0 in names;
+        document.writeln(result);
+    </script>
+</body>
+
+</html>
