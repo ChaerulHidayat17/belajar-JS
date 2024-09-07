@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+        // rest parameter
+        function sum(name, ...data) {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`)
+        }
+        sum('Banana', 20, 40, 35, 15, 90, 86, 99, 39);
+        sum('Apple', 13, 34,56,23,13,10);
+        sum('Orange', 12, 14, 76, 47, 43, 77, 22);
+
+        // spread syntack jika data nya terlanjur array
+        const values = [10, 20, 45, 60 ,90];
+        sum('Manngo', ...values)
+    </script>
+</body>
+</html>
