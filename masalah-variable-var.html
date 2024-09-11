@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masalah Variable Var</title>
+</head>
+<body>
+    <script>
+        // Kalau Pake Let dia bisa membedakan Scope
+        // Global Scope
+        let i = 20;
+        for (let i = 1; i<=10; i++){
+            // Local Scope
+            console.info(`Local Scope ${i}`);
+        }
+
+        console.info(`Global Scope ${i}`);
+
+        // Kalau Pake Var dia ga bisa bedakan Scope
+
+        
+    </script>
+</body>
+</html>

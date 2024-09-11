@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+       {
+        const names = ['Chaerul', 'Hidayat', 'Iyung', 'Caca', 'Rona', 'Andika']
+        const [firstName, middleName, lastName, ...others] = names;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+       }
+
+       {
+        const person = {
+            firstName : 'Chaerul',
+            lastName  : 'Hidayat',
+            addres: {
+                street: 'Jalan Setia Budi',
+                city : 'Cikarang',
+                country: 'Bekasi'
+            },
+            hobby: 'Game',
+            channel : 'Belajar Java Script'
+        };
+
+        let {firstName, lastName, addres:{street, city, country}, ...others} = person; // Nested Object
+        console.info(firstName);
+        console.info(lastName);
+        console.info(street);
+        console.info(city);
+        console.info(country)
+        console.info(others);
+
+       }
+
+       { // Destructuring di Function Parameter 1
+        function displayPerson({firstName, middleName, lastName}) {
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        const person = {
+            firstName: "Chaerul",
+            middleName: 'Hidayat',
+            lastName: 'Struick'
+        };
+        displayPerson(person);
+       }
+
+       { // Destructuring Terhadap Array
+        function sum ([first, second]) {
+            return first * second;
+        }
+        console.info(sum([5,5]));
+        console.info(sum([9,9]));
+       }
+
+       //Default Value Array
+       {
+        const names = ['Chaerul', 'Hidayat', 'Haye'];
+        const [firstName, middleName, lastName = 'default'] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+       }
+
+       //Default Value Object
+       {
+        const person = {
+            firstName: 'Lionel',
+            middleName: 'Messi',
+            lastName: 'Argentina',
+        };
+        
+        let {firstName, middleName, lastName= 'Goat'} = person
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+
+       }
+
+       //Merubah Nama Variable Nya
+       {
+        const person = {
+            firstName: 'Lionel',
+            middleName: 'Messi',
+            lastName: 'Argentina',
+        };
+        
+        let {firstName: namaDepan, 
+            middleName: namaTengah,
+            lastName: namaBelakang = 'Goat'} = person
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+
+       }
+
+      
+    </script>
+</body>
+</html>
